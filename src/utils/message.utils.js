@@ -4,7 +4,7 @@
  * @param {Function} success
  * @param {Function} error
  */
-export function messageService(res, success = new Function(), error = new Function()) {
+export function messageUtils(res, success = new Function(), error = new Function()) {
     if (res.code === 'ok') {
         success();
         this.$message({

@@ -6,14 +6,14 @@ import router from '@/router'
 const url = configService.domain;
 
 // 创建一个axios
-const request = axios.create({
+const requestService = axios.create({
   baseURL: url
 });
 
 /**
  * 请求拦截
  */
-request.interceptors.request.use(config => {
+requestService.interceptors.request.use(config => {
   // 不是登录页面，请求头加上token值
   if (config.url !== '/login') {
     config.headers['x-auth-token'] = JSON.parse(getUserInfo()).token;
@@ -27,7 +27,7 @@ request.interceptors.request.use(config => {
 /**
  * 响应拦截
  */
-request.interceptors.response.use(
+requestService.interceptors.response.use(
   response => {
     const res = response.data;
     if (res.code === '401') {
@@ -48,4 +48,4 @@ request.interceptors.response.use(
   }
 );
 
-export default request;
+export default requestService;

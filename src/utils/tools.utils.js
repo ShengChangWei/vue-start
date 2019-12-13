@@ -3,7 +3,7 @@
  * params是post请求需要的参数，
  * url是请求url地址
  */
-export function postFile(params, url) {
+export function postFileUtils(params, url) {
   var form = document.createElement('form');
   form.style.display = 'none';
   form.action = url;
@@ -28,7 +28,7 @@ export function postFile(params, url) {
    * @param {string} fmt 格式 除了月使用大写M，其它都是小写
    * @returns {string}
    */
-export function dateFormat(value, fmt) {
+export function dateFormatUtils(value, fmt) {
   if (new Date(value).toString() === 'Invalid Date') {
     throw new Error('Invalid Date');
   }
@@ -66,7 +66,7 @@ export function dateFormat(value, fmt) {
 * @param {number} value 秒数
 * @returns {string}
 */
-export function timeFormat(value) {
+export function timeFormatUtils(value) {
   const h = parseInt(value / 3600 + '', 10) < 10 ? '0' + parseInt(value / 3600 + '', 10) : '' + parseInt(value / 3600 + '', 10);
   const m = parseInt(value % 3600 / 60 + '', 10) < 10 ? '0' + parseInt(value % 3600 / 60 + '', 10) : '' + parseInt(value % 3600 / 60 + '', 10);
   let s;

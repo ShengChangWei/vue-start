@@ -12,14 +12,14 @@ import '@/assets/fonts/iconfont.css';
 import '@/assets/fonts/sysiconfont.css';
 import EVueContextmenu from 'e-vue-contextmenu';
 import EVueEsrimapjs from 'e-vue-esrimapjs';
-import { messageService } from '@/utils/messageService.js'
+import { messageUtils } from '@/utils/message.utils.js'
 import { getUrlParsms, saveUserInfo } from '@/services/auth.service';
 import configService from '@/services/config.service'
 Vue.use(EVueEsrimapjs);
 Vue.use(EVueContextmenu);
 Vue.use(Element);
 Vue.config.productionTip = false;
-Vue.prototype.$messageService = messageService;
+Vue.prototype.$messageUtils = messageUtils;
 
 if (getUrlParsms('userInfo')) {
   saveUserInfo(JSON.parse(decodeURIComponent(getUrlParsms('userInfo'))))
