@@ -4,7 +4,6 @@ import router from './router';
 import store from './store';
 import Element from 'element-ui';
 import 'font-awesome/css/font-awesome.css';
-import '@/styles/bootstrap.css';
 //  reset CSS
 import 'normalize.css/normalize.css';
 import '@/styles/index.scss'; // global css

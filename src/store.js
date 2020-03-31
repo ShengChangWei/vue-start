@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     sidebar: true,
+    navType: true,
     currUserMenus: [],
     currUserResources: [],
     visitedViews: [],

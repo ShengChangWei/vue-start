@@ -184,7 +184,7 @@ module.exports = {
       'avoidEscape': true,
       'allowTemplateLiterals': true
     }],
-    'semi': [0, 'never'], // 关闭不加分号
+    'semi': ["error", 'always'], // 加分号
     'semi-spacing': [2, {
       'before': false,
       'after': true

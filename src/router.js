@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import NProgress from 'nprogress'; // Progress 进度条
 import 'nprogress/nprogress.css'; // Progress 进度条样式
 import Home from '@/views/home/home.vue'
+import index from '@/views/index/index.vue'
 Vue.use(Router);
 /**
  * 重写路由的push方法
@@ -19,7 +20,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: Home,
+      component: index,
       redirect: '/rainSearch',
       meta: { title: '雨量查询' },
       children: [
@@ -33,7 +34,7 @@ const router = new Router({
     },
     {
       path: '/waterInfo',
-      component: Home,
+      component: index,
       redirect: '/waterInfo/useWaterManage',
       meta: { title: '雨量信息' },
       children: [

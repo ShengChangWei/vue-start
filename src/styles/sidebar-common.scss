@@ -1,0 +1,83 @@
+#app { 
+.horizontal-page {
+    .el-menu-item,.el-submenu,.el-submenu__title{
+        // 顶部导航的高
+        height:$navHeight;
+        line-height: $navHeight;
+    }
+    .el-submenu {
+        &.is-active {
+            background-color: $menuActivebgc !important;
+            i {
+                color:  $warning !important;
+                &.el-submenu__icon-arrow {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
+.el-submenu__title {
+        &:hover {
+            background-color: $menuActivebgc !important;
+          }
+    }
+    .el-menu {
+        border: none;
+        height: 100%;
+        width: 100% !important;
+        font-size: 16px;
+        .el-menu-item  {
+          &:hover {
+            background-color: $menuActivebgc !important;
+          }
+          &.is-active {
+            background-color: $menuActivebgc !important;
+          }
+        }
+      }
+}
+
+
+.el-menu--vertical,.el-menu--horizontal {
+    .nest-menu .el-submenu>.el-submenu__title,
+    .el-menu-item {
+      &:hover {
+        // you can use $subMenuHover
+        background-color: $menuHover !important;
+      }
+    }
+  
+    // the scroll bar appears when the subMenu is too long
+    >.el-menu--popup {
+      max-height: 100vh;
+      overflow-y: auto;
+      background-color: $subMenuBg !important;
+      .el-menu-item  {
+        i {
+          color: #fff;
+        }
+      }
+      &::-webkit-scrollbar-track-piece {
+        background: #d3dce6;
+      }
+  
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: #99a9bf;
+        border-radius: 20px;
+      }
+    }
+  }
+  
+  .el-menu-item.is-active i {
+    color:  $warning !important;
+  }
+  .el-menu.el-menu--popup.el-menu--popup-bottom-start {
+    .menu-wrapper {
+      float: none;
+    }
+  }
