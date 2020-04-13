@@ -1,6 +1,5 @@
 <template>
-
-  <el-row>
+  <el-row xs="24">
     <el-col :span="4">
       <logo :collapse="!$store.state.sidebar"></logo>
     </el-col>

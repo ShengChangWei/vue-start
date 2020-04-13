@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     sidebar: true,
-    navType: true,
+    navType: false, // true 侧边导航，false 顶部导航
     currUserMenus: [],
     currUserResources: [],
     visitedViews: [],

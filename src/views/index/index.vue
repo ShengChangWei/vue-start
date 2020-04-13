@@ -76,7 +76,7 @@ export default {
     position: fixed;
     top: 0;
     right: 0;
-    height: 54px;
+    height: $navHeight;
     width: calc(100% - #{$sideBarWidth});
     transition: width 0.28s;
     &.is-hide {
@@ -121,8 +121,8 @@ export default {
   }
   .app-page {
     margin-left: 210px;
-    margin-top: 54px;
-    height: 100%;
+    margin-top: $navHeight;
+    height: calc(100% - #{$navHeight});
     transition: width 0.28s;
     &.is-hide {
       margin-left: 54px !important;
@@ -130,8 +130,9 @@ export default {
     // doto
     &.is-navBar {
       transition: margin 0.28s;
-      margin: 0;
-      margin-top: 7px !important;
+      //   margin: 0;
+      margin-top: 0px !important;
+      margin-left: 0px !important;
     }
   }
 

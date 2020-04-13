@@ -66,12 +66,13 @@ export default {
     toPath(item) {
       if (item.urlType === 'out') {
         const userInfo = JSON.parse(getUserInfo());
-        window.open(
-          `${item.url}?userInfo=${encodeURIComponent(
-            JSON.stringify(userInfo)
-          )}`,
-          '_blank'
-        );
+        // window.open(
+        //   `${item.url}?userInfo=${encodeURIComponent(
+        //     JSON.stringify(userInfo)
+        //   )}`,
+        //   '_blank'
+        // );
+         window.open(item.url, '_blank');
         setTimeout(() => {
           this.$router.push({ path: this.$store.state.currUserMenus[0].url });
         });

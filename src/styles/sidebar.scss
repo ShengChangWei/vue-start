@@ -1,0 +1,118 @@
+#app { 
+.horizontal-page {
+    .el-menu-item,.el-submenu,.el-submenu__title{
+        // 顶部导航的高
+        height:$navHeight;
+        line-height: $navHeight;
+    }
+    .el-menu-item {
+      font-size: 16px !important;
+      i {
+        margin-right: 10px !important;
+      }
+    }
+    .el-submenu {
+        &.is-active {
+            background-color: $menuActivebgc !important;
+            i {
+                color:  $warning !important;
+                &.el-submenu__icon-arrow {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}
+  // 导航样式
+    .el-menu {
+      border: none;
+      height: 100%;
+      width: 100% !important;
+      font-size: 16px !important;
+      color: #fff !important;
+      .el-menu-item {
+        font-size: 16px !important;
+        i {
+          color: #fff !important;
+          margin-right: 10px !important;
+        }
+        &:hover,&.is-active {
+          background-color: $menuHover !important;
+          i {
+            color: $warning !important;
+          }
+        }
+      }
+      .el-submenu  {
+        i {
+          color: #fff !important;
+          margin-right: 10px !important;
+        }
+        .el-submenu__title {
+          font-size: 16px !important;
+          &:hover {
+            background-color: $menuActivebgc !important;
+          }
+        }
+        .el-menu-item {
+          background-color: $subMenuBg !important;
+          &:hover,&.is-active {
+            background-color: $subMenuHover !important;
+            i {
+              color: $warning !important;
+            }
+          }
+        }
+        &.is-active {
+          > .el-submenu__title {
+            background-color: $menuActivebgc !important;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  // #app 同级目录
+.el-menu--vertical,.el-menu--horizontal {
+    .nest-menu .el-submenu>.el-submenu__title,
+    .el-menu-item {
+      &:hover {
+        background-color: $menuHover !important;
+      }
+    }
+      >.el-menu--popup {
+      max-height: 100vh;
+      overflow-y: auto;
+      background-color: $subMenuBg !important;
+      .el-menu-item  {
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+   .el-menu--popup {
+    .menu-wrapper {
+      float: none;
+      i {
+        margin-right: 10px !important;
+      }
+    }
+  }
+  .el-menu--collapse.el-menu {
+    i {
+      padding-left: 3px  !important;
+    }
+  }
+  .el-menu-item.is-active i {
+    color:  $warning !important;
+  }
+  .el-menu.el-menu--popup.el-menu--popup-bottom-start {
+    .menu-wrapper {
+      float: none;
+     
+    }
+  }

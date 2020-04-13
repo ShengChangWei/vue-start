@@ -52,6 +52,7 @@ export default {
   },
   created() {
     const routerData = routerInfo.options.routes;
+    console.log(this.$store.state.currUserMenus);
     this.curMenu =
       this.$store.state.currUserMenus.length > 0
         ? this.$store.state.currUserMenus

@@ -30,8 +30,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/variables.scss';
 .navbar {
-  height: 54px;
+  height: 100%;
   overflow: hidden;
   position: relative;
   background: #fff;
@@ -39,7 +40,7 @@ export default {
   margin: 0;
 
   .hamburger-container {
-    line-height: 52px;
+    line-height:  $navHeight;
     height: 100%;
     float: left;
     cursor: pointer;
@@ -58,7 +59,7 @@ export default {
   .right-menu {
     float: right;
     height: 100%;
-    line-height: 50px;
+    line-height:  $navHeight;
     padding-right: 10px;
     &:focus {
       outline: none;

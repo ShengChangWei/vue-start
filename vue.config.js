@@ -7,11 +7,11 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://192.168.0.103:8082',
+        target: 'http://192.168.0.91:9091',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
-          '^/api': ''
+          '^/api': '/euauth'
         }
       }
     }

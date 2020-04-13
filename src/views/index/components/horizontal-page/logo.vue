@@ -1,13 +1,7 @@
 <template>
   <div class="sidebar-logo-container">
-    <div key="expand"
-         class="sidebar-logo-link"
-         to="/">
-      <img v-if="logo"
-           :src="logo"
-           class="sidebar-logo">
-      <h1 class="sidebar-title">{{ title }} </h1>
-    </div>
+    <img :src="logo"
+         class="sidebar-logo">
   </div>
 </template>
 
@@ -22,8 +16,8 @@ export default {
   },
   data() {
     return {
-      title: 'vue-essence-start 项目',
-      logo: require('@/assets/images/pc/logo.png')
+      // title: require('@/assets/images/pc/essence.png'),
+      logo: require('@/assets/images/pc/essence.png')
     };
   }
 };
@@ -35,28 +29,11 @@ export default {
 .sidebar-logo-container {
   position: relative;
   width: 100%;
-  height: $navHeight;
-  line-height: $navHeight;
-  padding-left: 30px;
-  & .sidebar-logo-link {
-    height: 100%;
+  height: 100%;
+  padding: 0 10px;
+  .sidebar-logo {
     width: 100%;
-    .sidebar-logo {
-      width: 30px;
-      height: 41px;
-      vertical-align: middle;
-      margin-right: 12px;
-    }
-    .sidebar-title {
-      display: inline-block;
-      margin: 0;
-      color: #fff;
-      font-weight: 600;
-      line-height: 50px;
-      font-size: 14px;
-      font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
-      vertical-align: middle;
-    }
+    padding-top: 14px;
   }
 }
 </style>

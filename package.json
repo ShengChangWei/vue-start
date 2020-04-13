@@ -11,7 +11,6 @@
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "e-vue-contextmenu": "^0.1.2",
-    "e-vue-esrimap": "^1.0.9",
     "e-vue-esrimapjs": "^0.1.4",
     "element-ui": "^2.4.5",
     "font-awesome": "^4.7.0",
